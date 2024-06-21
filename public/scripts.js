@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkedBoxes = document.querySelectorAll('input[name="symptoms"]:checked');
     const symptoms = Array.from(checkedBoxes).map(cb => cb.value);
 
-    fetch('http://localhost:3000/get_diseases', {
+    fetch('https://your-flask-app.vercel.app/get_diseases', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
